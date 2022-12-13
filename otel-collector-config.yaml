@@ -5,11 +5,19 @@ receivers:
   zipkin:
 
 exporters:
-  #kafka:
-   # brokers:
-    #  - kafka:9093
-    #protocol_version: 2.0.0
-    #encoding: otlp_json
+  kafka/metrics:
+    brokers:
+      - kafka:9093
+    protocol_version: 2.0.0
+    encoding: otlp_json
+    topic: otlp_metrics
+
+  kafka/traces:
+    brokers:
+      - kafka:9093
+    protocol_version: 2.0.0
+    encoding: otlp_json
+    topic: otlp_spans
 
   logging:
     verbosity: detailed
@@ -30,6 +38,10 @@ service:
   extensions: [pprof, zpages, health_check]
   pipelines:
     traces:
-      receivers: [otlp,zipkin]
+      receivers: [otlp, zipkin]
       processors: [batch]
-      exporters: [logging]
+      exporters: [logging, kafka/traces]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, kafka/metrics]
