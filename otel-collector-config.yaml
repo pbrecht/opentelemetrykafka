@@ -1,0 +1,35 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+  zipkin:
+
+exporters:
+  #kafka:
+   # brokers:
+    #  - kafka:9093
+    #protocol_version: 2.0.0
+    #encoding: otlp_json
+
+  logging:
+    verbosity: detailed
+    sampling_initial: 5
+    sampling_thereafter: 200
+
+processors:
+  batch:
+
+extensions:
+  health_check:
+  pprof:
+    endpoint: :1888
+  zpages:
+    endpoint: :55679
+
+service:
+  extensions: [pprof, zpages, health_check]
+  pipelines:
+    traces:
+      receivers: [otlp,zipkin]
+      processors: [batch]
+      exporters: [logging]
