@@ -1,1 +1,1 @@
-rootProject.name = "VehicleStreamProcessor"
+rootProject.name = "StreamProcessor"

@@ -1,4 +1,4 @@
-package com.pdig.streams.vehicle.config.serde
+package com.pdig.streams.events.config.serde
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.apache.kafka.common.serialization.Deserializer

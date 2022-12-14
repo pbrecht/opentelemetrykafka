@@ -8,7 +8,7 @@ plugins {
     kotlin("plugin.spring") version "1.6.21"
 }
 
-group = "com.pdig.vehicle.streams"
+group = "com.pdig.streams.events"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 

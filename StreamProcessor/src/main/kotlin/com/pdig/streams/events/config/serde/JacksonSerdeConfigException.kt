@@ -1,4 +1,4 @@
-package com.pdig.streams.vehicle.config.serde
+package com.pdig.streams.events.config.serde
 
 import kotlin.reflect.KClass
 

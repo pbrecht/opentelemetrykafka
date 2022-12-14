@@ -1,4 +1,4 @@
-package com.pdig.streams.vehicle
+package com.pdig.streams.events
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -6,8 +6,8 @@ import org.springframework.kafka.annotation.EnableKafkaStreams
 
 @EnableKafkaStreams
 @SpringBootApplication
-class VehicleStreamProcessorApplication
+class StreamProcessorApplication
 
 fun main(args: Array<String>) {
-    runApplication<VehicleStreamProcessorApplication>(*args)
+    runApplication<StreamProcessorApplication>(*args)
 }

@@ -1,4 +1,4 @@
-package com.pdig.streams.vehicle.config
+package com.pdig.streams.events.config
 
 import org.apache.kafka.streams.KafkaStreams.State
 import org.apache.kafka.streams.KafkaStreams.StateListener

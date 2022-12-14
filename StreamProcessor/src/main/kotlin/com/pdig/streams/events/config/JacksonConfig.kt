@@ -1,4 +1,4 @@
-package com.pdig.streams.vehicle.config
+package com.pdig.streams.events.config
 
 import com.fasterxml.jackson.databind.SerializationFeature
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
