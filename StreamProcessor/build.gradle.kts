@@ -35,7 +35,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     // MongoDB
-    implementation("org.springframework.data:spring-data-mongodb")
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.apache.kafka:kafka-streams-test-utils:3.1.1")

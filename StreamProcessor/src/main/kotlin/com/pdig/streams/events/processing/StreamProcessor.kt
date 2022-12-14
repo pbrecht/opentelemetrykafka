@@ -24,7 +24,7 @@ class StreamProcessor {
     fun appTopics(): KafkaAdmin.NewTopics {
         return KafkaAdmin.NewTopics(
             TopicBuilder.name(TRACE_TOPIC).build(),
-            TopicBuilder.name(TRACKING_TOPIC).compact().build()
+            TopicBuilder.name(TRACKING_TOPIC).build()
         )
     }
 
@@ -34,7 +34,7 @@ class StreamProcessor {
     }
 
     @Bean
-    fun topology(streamsBuilder: StreamsBuilder): KStream<String, JsonNode> {
+    fun topology(streamsBuilder: StreamsBuilder, spanRepository: SpanRepository): KStream<String?, JsonNode> {
 
         val serdeKey = Serdes.String()
         val serdeValue = JacksonSerde(jacksonObjectMapper(), JsonNode::class.java)
@@ -47,10 +47,10 @@ class StreamProcessor {
         streamsBuilder.addStateStore(store)
 
 
-        val consumedWith: Consumed<String, JsonNode> = Consumed.with(serdeKey, serdeValue)
+        val consumedWith: Consumed<String?, JsonNode> = Consumed.with(serdeKey, serdeValue)
         val input = streamsBuilder.stream(TRACE_TOPIC, consumedWith)
 
-        input.transform({ EventTransfomer() })
+        input.transform({ EventTransfomer(spanRepository) }, "store")
         input.peek { key, value ->  logger.info("Receive msg with key $key and value $value")}
         input.to(TRACKING_TOPIC)
         return input

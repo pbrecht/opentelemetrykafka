@@ -78,6 +78,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: rootpassword
+      MONGO_INITDB_USERNAME: root
+      MONGO_INITDB_PASSWORD: rootpassword
       MONGO_INITDB_DATABASE: mongo
     ports:
       - "27017:27017"
