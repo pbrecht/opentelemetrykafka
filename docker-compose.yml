@@ -1,15 +1,17 @@
 version: '1'
 services:
-#  spring-petclinic:
-#    container_name: spring-petclinic
-#    build:
-#      context: spring-petclinic
-#      dockerfile: Dockerfile
-#    image: spring-petclinic:latest
-#    ports:
-#      - 18888:8080
-#    depends_on:
-#      - kafka
+  spring-petclinic:
+    container_name: spring-petclinic
+    build:
+      context: spring-petclinic
+      dockerfile: Dockerfile
+    image: spring-petclinic:latest
+    ports:
+      - 18888:8080
+    depends_on:
+      kafka:
+        condition: service_healthy
+
   otel-collector:
     image: otel/opentelemetry-collector
     command: [ "--config=/etc/otel-collector-config.yaml" ]
@@ -25,7 +27,9 @@ services:
       - "55679:55679" # zpages extension
       - "9411:9411"
     depends_on:
-      - kafka
+      kafka:
+        condition: service_healthy
+
   zookeeper:
     image: wurstmeister/zookeeper
     ports:
@@ -33,6 +37,7 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
+
   kafka:
     image: wurstmeister/kafka:2.13-2.6.0
     depends_on:
@@ -49,6 +54,13 @@ services:
       KAFKA_CREATE_TOPICS: "otlp_spans:1:1,otlp_metrics:1:1,otlp_logs:1:1"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    healthcheck:
+      test: nc -z kafka 9092
+      start_period: 10s
+      interval: 5s
+      timeout: 10s
+      retries: 10
+
   kafdrop:
     image: obsidiandynamics/kafdrop
     ports:
@@ -58,4 +70,5 @@ services:
       JVM_OPTS: "-Xms32M -Xmx64M"
       SERVER_SERVLET_CONTEXTPATH: "/"
     depends_on:
-      - kafka
+      kafka:
+        condition: service_healthy
