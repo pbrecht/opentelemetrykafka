@@ -8,6 +8,7 @@ import org.apache.kafka.common.serialization.Serdes
 import org.apache.kafka.streams.StreamsBuilder
 import org.apache.kafka.streams.kstream.Consumed
 import org.apache.kafka.streams.kstream.KStream
+import org.apache.kafka.streams.kstream.Produced
 import org.apache.kafka.streams.state.Stores
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -48,11 +49,12 @@ class StreamProcessor {
 
 
         val consumedWith: Consumed<String?, JsonNode> = Consumed.with(serdeKey, serdeValue)
+        val producedWith = Produced.with(serdeKey, serdeValue)
         val input = streamsBuilder.stream(TRACE_TOPIC, consumedWith)
 
         input.transform({ EventTransfomer(spanRepository) }, "store")
         input.peek { key, value ->  logger.info("Receive msg with key $key and value $value")}
-        input.to(TRACKING_TOPIC)
+        input.to(TRACKING_TOPIC,producedWith)
         return input
     }
 }
