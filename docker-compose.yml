@@ -1,61 +1,61 @@
 version: '1'
 services:
- spring-petclinic:
-  container_name: spring-petclinic
-  build:
-   context: spring-petclinic
-   dockerfile: Dockerfile
-  image: spring-petclinic:latest
-  ports:
-   - 18888:8080
-  depends_on:
-   - kafka
- otel-collector:
-  image: otel/opentelemetry-collector
-  command: ["--config=/etc/otel-collector-config.yaml"]
-  volumes:
-   - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
-  ports:
-   - "1888:1888"   # pprof extension
-   - "8888:8888"   # Prometheus metrics exposed by the collector
-   - "8889:8889"   # Prometheus exporter metrics
-   - "13133:13133" # health_check extension
-   - "4317:4317"   # OTLP gRPC receiver
-   - "4318:4318"   # OTLP http receiver
-   - "55679:55679" # zpages extension
-   - "9411:9411"
-  depends_on:
-   - kafka
- zookeeper:
-  image: wurstmeister/zookeeper
-  ports:
-   - "2181:2181"
-  environment:
-   ZOOKEEPER_CLIENT_PORT: 2181
-   ZOOKEEPER_TICK_TIME: 2000
- kafka:
-  image: wurstmeister/kafka:2.13-2.6.0
-  depends_on:
-   - zookeeper
-  ports:
-   - "9092:9092"
-   - "9093:9093"
-  environment:
-   KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-   KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:9093,OUTSIDE://localhost:9092
-   KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
-   KAFKA_LISTENERS: INSIDE://:9093,OUTSIDE://0.0.0.0:9092
-   KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
-   KAFKA_CREATE_TOPICS: "otlp_spans:2:1,otlp_metrics:2:1,otlp_logs:2:1"
-  volumes:
-   - /var/run/docker.sock:/var/run/docker.sock
- kafdrop:
-  image: obsidiandynamics/kafdrop
-  ports:
-   - "9000:9000"
-  environment:
-   KAFKA_BROKERCONNECT: kafka:9093
-   JVM_OPTS: "-Xms32M -Xmx64M"
-   SERVER_SERVLET_CONTEXTPATH: "/"
-  depends_on:
-   - kafka
+#  spring-petclinic:
+#    container_name: spring-petclinic
+#    build:
+#      context: spring-petclinic
+#      dockerfile: Dockerfile
+#    image: spring-petclinic:latest
+#    ports:
+#      - 18888:8080
+#    depends_on:
+#      - kafka
+  otel-collector:
+    image: otel/opentelemetry-collector
+    command: [ "--config=/etc/otel-collector-config.yaml" ]
+    volumes:
+      - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
+    ports:
+      - "1888:1888"   # pprof extension
+      - "8888:8888"   # Prometheus metrics exposed by the collector
+      - "8889:8889"   # Prometheus exporter metrics
+      - "13133:13133" # health_check extension
+      - "4317:4317"   # OTLP gRPC receiver
+      - "4318:4318"   # OTLP http receiver
+      - "55679:55679" # zpages extension
+      - "9411:9411"
+    depends_on:
+      - kafka
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+  kafka:
+    image: wurstmeister/kafka:2.13-2.6.0
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+      - "9093"
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:9093,OUTSIDE://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_LISTENERS: INSIDE://:9093,OUTSIDE://:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+      KAFKA_CREATE_TOPICS: "otlp_spans:1:1,otlp_metrics:1:1,otlp_logs:1:1"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  kafdrop:
+    image: obsidiandynamics/kafdrop
+    ports:
+      - "9000:9000"
+    environment:
+      KAFKA_BROKERCONNECT: kafka:9093
+      JVM_OPTS: "-Xms32M -Xmx64M"
+      SERVER_SERVLET_CONTEXTPATH: "/"
+    depends_on:
+      - kafka
