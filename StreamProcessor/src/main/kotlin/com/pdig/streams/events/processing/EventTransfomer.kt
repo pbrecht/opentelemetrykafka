@@ -5,8 +5,9 @@ import org.apache.kafka.streams.KeyValue
 import org.apache.kafka.streams.kstream.Transformer
 import org.apache.kafka.streams.processor.ProcessorContext
 import org.apache.kafka.streams.state.KeyValueStore
+import java.util.UUID
 
-class EventTransfomer : Transformer<String, JsonNode, KeyValue<String, JsonNode>> {
+class EventTransfomer : Transformer<String?, JsonNode, KeyValue<String, JsonNode>> {
 
     private lateinit var store: KeyValueStore<String, JsonNode>
 
@@ -15,7 +16,7 @@ class EventTransfomer : Transformer<String, JsonNode, KeyValue<String, JsonNode>
     }
 
     override fun transform(key: String?, value: JsonNode?): KeyValue<String, JsonNode> {
-        store.get(key)
+        //store.get(key)
         /*val newValue = (value as ObjectNode).set<JsonNode>(
             "details", jacksonObjectMapper().valueToTree(
                 VehicleDetails(
@@ -24,7 +25,7 @@ class EventTransfomer : Transformer<String, JsonNode, KeyValue<String, JsonNode>
                 )
             )
         )*/
-        return KeyValue.pair(key, value)
+        return KeyValue.pair(UUID.randomUUID().toString(), value)
     }
 
     override fun close() {
