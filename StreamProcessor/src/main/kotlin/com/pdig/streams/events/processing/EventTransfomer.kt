@@ -37,7 +37,7 @@ class EventTransfomer(val spanRepository: SpanRepository) : Transformer<String?,
     }
 
     override fun close() {
-        TODO("Not yet implemented")
+
     }
 }
 

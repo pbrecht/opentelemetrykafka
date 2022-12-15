@@ -5,4 +5,5 @@ ENV otel.resource.attributes.service.name otel-collector
 ENV otel.traces.exporter zipkin
 ENV otel.exporter.zipkin.endpoint http://otel-collector:9411
 ENV otel.exporter.otlp.endpoint http://otel-collector:4317
+ENV OTEL_INSTRUMENTATION_HTTP_CAPTURE_HEADERS_SERVER_REQUEST=Referer
 ENTRYPOINT ["java", "-javaagent:/opentelemetry-javaagent.jar" ,"-jar", "/spring-petclinic-2.7.3.jar"]

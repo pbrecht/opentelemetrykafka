@@ -1,0 +1,1475 @@
+{
+  "resourceSpans": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "spring-petclinic-2.7.3"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "io.opentelemetry.hibernate-4.0",
+            "version": "1.20.2-alpha"
+          },
+          "spans": [
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "a9b913104ea13f61",
+              "parentSpanId": "9a6b8c459408f3f8",
+              "name": "transaction.commit",
+              "startTimeUnixNano": "1671056569534175000",
+              "endTimeUnixNano": "1671056569534554000",
+              "attributes": [
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.hibernate-4.0"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "b509d5ae75057269",
+              "parentSpanId": "f2e3582ea85c8ea2",
+              "name": "select",
+              "startTimeUnixNano": "1671056569536635000",
+              "endTimeUnixNano": "1671056569537216000",
+              "attributes": [
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.hibernate-4.0"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "303d7475c57d4e7f",
+              "parentSpanId": "9a6b8c459408f3f8",
+              "name": "select",
+              "startTimeUnixNano": "1671056569501494000",
+              "endTimeUnixNano": "1671056569527497000",
+              "attributes": [
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.hibernate-4.0"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "3d90dceb6d9de7fd",
+              "parentSpanId": "f2e3582ea85c8ea2",
+              "name": "transaction.commit",
+              "startTimeUnixNano": "1671056569537346000",
+              "endTimeUnixNano": "1671056569537624000",
+              "attributes": [
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.hibernate-4.0"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        },
+        {
+          "scope": {
+            "name": "io.opentelemetry.jdbc",
+            "version": "1.20.2-alpha"
+          },
+          "spans": [
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "2c32f424e248b277",
+              "parentSpanId": "303d7475c57d4e7f",
+              "name": "select 017ea15f-a535-4402-8366-7599d7e0b04e",
+              "kind": 3,
+              "startTimeUnixNano": "1671056569511651000",
+              "endTimeUnixNano": "1671056569513052000",
+              "attributes": [
+                {
+                  "key": "db.system",
+                  "value": {
+                    "stringValue": "h2"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "db.connection_string",
+                  "value": {
+                    "stringValue": "h2:mem:"
+                  }
+                },
+                {
+                  "key": "db.name",
+                  "value": {
+                    "stringValue": "017ea15f-a535-4402-8366-7599d7e0b04e"
+                  }
+                },
+                {
+                  "key": "db.user",
+                  "value": {
+                    "stringValue": "sa"
+                  }
+                },
+                {
+                  "key": "db.operation",
+                  "value": {
+                    "stringValue": "SELECT"
+                  }
+                },
+                {
+                  "key": "db.statement",
+                  "value": {
+                    "stringValue": "select owner0_.id as id1_0_0_, pets1_.id as id1_1_1_, owner0_.first_name as first_na2_0_0_, owner0_.last_name as last_nam3_0_0_, owner0_.address as address4_0_0_, owner0_.city as city5_0_0_, owner0_.telephone as telephon6_0_0_, pets1_.name as name2_1_1_, pets1_.birth_date as birth_da3_1_1_, pets1_.type_id as type_id4_1_1_, pets1_.owner_id as owner_id5_1_0__, pets1_.id as id1_1_0__ from owners owner0_ left outer join pets pets1_ on owner0_.id=pets1_.owner_id where owner0_.id=? order by pets1_.name"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.jdbc"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "b645e50a5f66660c",
+              "parentSpanId": "303d7475c57d4e7f",
+              "name": "select 017ea15f-a535-4402-8366-7599d7e0b04e.types",
+              "kind": 3,
+              "startTimeUnixNano": "1671056569522404000",
+              "endTimeUnixNano": "1671056569522596000",
+              "attributes": [
+                {
+                  "key": "db.statement",
+                  "value": {
+                    "stringValue": "select pettype0_.id as id1_3_0_, pettype0_.name as name2_3_0_ from types pettype0_ where pettype0_.id=?"
+                  }
+                },
+                {
+                  "key": "db.system",
+                  "value": {
+                    "stringValue": "h2"
+                  }
+                },
+                {
+                  "key": "db.user",
+                  "value": {
+                    "stringValue": "sa"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "db.name",
+                  "value": {
+                    "stringValue": "017ea15f-a535-4402-8366-7599d7e0b04e"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.jdbc"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "db.connection_string",
+                  "value": {
+                    "stringValue": "h2:mem:"
+                  }
+                },
+                {
+                  "key": "db.operation",
+                  "value": {
+                    "stringValue": "SELECT"
+                  }
+                },
+                {
+                  "key": "db.sql.table",
+                  "value": {
+                    "stringValue": "types"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "f1e99c58319a782c",
+              "parentSpanId": "b509d5ae75057269",
+              "name": "select 017ea15f-a535-4402-8366-7599d7e0b04e",
+              "kind": 3,
+              "startTimeUnixNano": "1671056569536912000",
+              "endTimeUnixNano": "1671056569537067000",
+              "attributes": [
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "db.operation",
+                  "value": {
+                    "stringValue": "SELECT"
+                  }
+                },
+                {
+                  "key": "db.user",
+                  "value": {
+                    "stringValue": "sa"
+                  }
+                },
+                {
+                  "key": "db.statement",
+                  "value": {
+                    "stringValue": "select owner0_.id as id1_0_0_, pets1_.id as id1_1_1_, owner0_.first_name as first_na2_0_0_, owner0_.last_name as last_nam3_0_0_, owner0_.address as address4_0_0_, owner0_.city as city5_0_0_, owner0_.telephone as telephon6_0_0_, pets1_.name as name2_1_1_, pets1_.birth_date as birth_da3_1_1_, pets1_.type_id as type_id4_1_1_, pets1_.owner_id as owner_id5_1_0__, pets1_.id as id1_1_0__ from owners owner0_ left outer join pets pets1_ on owner0_.id=pets1_.owner_id where owner0_.id=? order by pets1_.name"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.jdbc"
+                  }
+                },
+                {
+                  "key": "db.connection_string",
+                  "value": {
+                    "stringValue": "h2:mem:"
+                  }
+                },
+                {
+                  "key": "db.name",
+                  "value": {
+                    "stringValue": "017ea15f-a535-4402-8366-7599d7e0b04e"
+                  }
+                },
+                {
+                  "key": "db.system",
+                  "value": {
+                    "stringValue": "h2"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "e813b45704f79393",
+              "parentSpanId": "303d7475c57d4e7f",
+              "name": "select 017ea15f-a535-4402-8366-7599d7e0b04e.visits",
+              "kind": 3,
+              "startTimeUnixNano": "1671056569527098000",
+              "endTimeUnixNano": "1671056569527355000",
+              "attributes": [
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "db.statement",
+                  "value": {
+                    "stringValue": "select visits0_.pet_id as pet_id4_6_0_, visits0_.id as id1_6_0_, visits0_.id as id1_6_1_, visits0_.visit_date as visit_da2_6_1_, visits0_.description as descript3_6_1_ from visits visits0_ where visits0_.pet_id=? order by visits0_.visit_date asc"
+                  }
+                },
+                {
+                  "key": "db.connection_string",
+                  "value": {
+                    "stringValue": "h2:mem:"
+                  }
+                },
+                {
+                  "key": "db.name",
+                  "value": {
+                    "stringValue": "017ea15f-a535-4402-8366-7599d7e0b04e"
+                  }
+                },
+                {
+                  "key": "db.user",
+                  "value": {
+                    "stringValue": "sa"
+                  }
+                },
+                {
+                  "key": "db.sql.table",
+                  "value": {
+                    "stringValue": "visits"
+                  }
+                },
+                {
+                  "key": "db.system",
+                  "value": {
+                    "stringValue": "h2"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.jdbc"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "db.operation",
+                  "value": {
+                    "stringValue": "SELECT"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        },
+        {
+          "scope": {
+            "name": "io.opentelemetry.servlet-3.0",
+            "version": "1.20.2-alpha"
+          },
+          "spans": [
+            {
+              "traceId": "a47ac028042821e39435d1cba25a2639",
+              "spanId": "7f7ffb64ee7e7764",
+              "parentSpanId": "a06cb8aa4bccf32a",
+              "name": "responsefacade.senderror",
+              "startTimeUnixNano": "1671056569781217000",
+              "endTimeUnixNano": "1671056569781249000",
+              "attributes": [
+                {
+                  "key": "code.function",
+                  "value": {
+                    "stringValue": "sendError"
+                  }
+                },
+                {
+                  "key": "code.namespace",
+                  "value": {
+                    "stringValue": "org.apache.catalina.connector.ResponseFacade"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.servlet-3.0"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "34"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-9"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        },
+        {
+          "scope": {
+            "name": "io.opentelemetry.spring-data-1.8",
+            "version": "1.20.2-alpha"
+          },
+          "spans": [
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "f2e3582ea85c8ea2",
+              "parentSpanId": "a4f3e51a1993c90e",
+              "name": "ownerrepository.findbyid",
+              "startTimeUnixNano": "1671056569536225000",
+              "endTimeUnixNano": "1671056569537656000",
+              "attributes": [
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.spring-data-1.8"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "code.function",
+                  "value": {
+                    "stringValue": "findById"
+                  }
+                },
+                {
+                  "key": "code.namespace",
+                  "value": {
+                    "stringValue": "org.springframework.samples.petclinic.owner.OwnerRepository"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "9a6b8c459408f3f8",
+              "parentSpanId": "a4f3e51a1993c90e",
+              "name": "ownerrepository.findbyid",
+              "startTimeUnixNano": "1671056569481439000",
+              "endTimeUnixNano": "1671056569534631000",
+              "attributes": [
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "code.function",
+                  "value": {
+                    "stringValue": "findById"
+                  }
+                },
+                {
+                  "key": "code.namespace",
+                  "value": {
+                    "stringValue": "org.springframework.samples.petclinic.owner.OwnerRepository"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.spring-data-1.8"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        },
+        {
+          "scope": {
+            "name": "io.opentelemetry.spring-webmvc-3.1",
+            "version": "1.20.2-alpha"
+          },
+          "spans": [
+            {
+              "traceId": "a47ac028042821e39435d1cba25a2639",
+              "spanId": "a06cb8aa4bccf32a",
+              "parentSpanId": "3bca2276ecaac9ff",
+              "name": "resourcehttprequesthandler.handlerequest",
+              "startTimeUnixNano": "1671056569707381000",
+              "endTimeUnixNano": "1671056569781263000",
+              "attributes": [
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-9"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.spring-webmvc-3.1"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "34"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "6b15ee9b1be25b20168ed65bdc3b154a",
+              "spanId": "6f9e0f30632bcc73",
+              "parentSpanId": "3afb443d64ae9d4a",
+              "name": "resourcehttprequesthandler.handlerequest",
+              "startTimeUnixNano": "1671056569657102000",
+              "endTimeUnixNano": "1671056569667099000",
+              "attributes": [
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-7"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.spring-webmvc-3.1"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "32"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "a47ac028042821e39435d1cba25a2639",
+              "spanId": "87e0032787bc9d2a",
+              "parentSpanId": "3bca2276ecaac9ff",
+              "name": "basicerrorcontroller.error",
+              "startTimeUnixNano": "1671056569784471000",
+              "endTimeUnixNano": "1671056569790218000",
+              "attributes": [
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "34"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-9"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.spring-webmvc-3.1"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "95b972d7aeca2003",
+              "parentSpanId": "d8690fdc65d722c4",
+              "name": "render owners/ownerdetails",
+              "startTimeUnixNano": "1671056569539841000",
+              "endTimeUnixNano": "1671056569632108000",
+              "attributes": [
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.spring-webmvc-3.1"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "a4f3e51a1993c90e",
+              "parentSpanId": "d8690fdc65d722c4",
+              "name": "ownercontroller.showowner",
+              "startTimeUnixNano": "1671056569464364000",
+              "endTimeUnixNano": "1671056569539642000",
+              "attributes": [
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.spring-webmvc-3.1"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "e3e857b9b50da57c69bff81dfeaf3e50",
+              "spanId": "4fc78a77d97090f8",
+              "parentSpanId": "d9e0edadc386d51e",
+              "name": "resourcehttprequesthandler.handlerequest",
+              "startTimeUnixNano": "1671056569690670000",
+              "endTimeUnixNano": "1671056569712275000",
+              "attributes": [
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-8"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.spring-webmvc-3.1"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "33"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        },
+        {
+          "scope": {
+            "name": "io.opentelemetry.tomcat-7.0",
+            "version": "1.20.2-alpha"
+          },
+          "spans": [
+            {
+              "traceId": "a47ac028042821e39435d1cba25a2639",
+              "spanId": "3bca2276ecaac9ff",
+              "parentSpanId": "",
+              "name": "/**",
+              "kind": 2,
+              "startTimeUnixNano": "1671056569703000000",
+              "endTimeUnixNano": "1671056569790973000",
+              "attributes": [
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.tomcat-7.0"
+                  }
+                },
+                {
+                  "key": "http.flavor",
+                  "value": {
+                    "stringValue": "1.1"
+                  }
+                },
+                {
+                  "key": "net.sock.host.port",
+                  "value": {
+                    "stringValue": "8080"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-9"
+                  }
+                },
+                {
+                  "key": "net.sock.host.addr",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                },
+                {
+                  "key": "http.user_agent",
+                  "value": {
+                    "stringValue": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+                  }
+                },
+                {
+                  "key": "net.sock.peer.port",
+                  "value": {
+                    "stringValue": "59050"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "http.scheme",
+                  "value": {
+                    "stringValue": "http"
+                  }
+                },
+                {
+                  "key": "net.host.port",
+                  "value": {
+                    "stringValue": "18888"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "34"
+                  }
+                },
+                {
+                  "key": "http.target",
+                  "value": {
+                    "stringValue": "/target/petclinic.css.map"
+                  }
+                },
+                {
+                  "key": "http.route",
+                  "value": {
+                    "stringValue": "/**"
+                  }
+                },
+                {
+                  "key": "net.sock.peer.addr",
+                  "value": {
+                    "stringValue": "172.20.0.1"
+                  }
+                },
+                {
+                  "key": "http.status_code",
+                  "value": {
+                    "stringValue": "404"
+                  }
+                },
+                {
+                  "key": "net.host.name",
+                  "value": {
+                    "stringValue": "localhost"
+                  }
+                },
+                {
+                  "key": "http.method",
+                  "value": {
+                    "stringValue": "GET"
+                  }
+                },
+                {
+                  "key": "net.transport",
+                  "value": {
+                    "stringValue": "ip_tcp"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "ce5c8581f8f011831ae5cb67803f0820",
+              "spanId": "d8690fdc65d722c4",
+              "parentSpanId": "",
+              "name": "/owners/{ownerid}",
+              "kind": 2,
+              "startTimeUnixNano": "1671056569406000000",
+              "endTimeUnixNano": "1671056569634181000",
+              "attributes": [
+                {
+                  "key": "net.sock.host.addr",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                },
+                {
+                  "key": "http.route",
+                  "value": {
+                    "stringValue": "/owners/{ownerId}"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "31"
+                  }
+                },
+                {
+                  "key": "net.sock.host.port",
+                  "value": {
+                    "stringValue": "8080"
+                  }
+                },
+                {
+                  "key": "net.sock.peer.addr",
+                  "value": {
+                    "stringValue": "172.20.0.1"
+                  }
+                },
+                {
+                  "key": "http.status_code",
+                  "value": {
+                    "stringValue": "200"
+                  }
+                },
+                {
+                  "key": "net.sock.peer.port",
+                  "value": {
+                    "stringValue": "59052"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.tomcat-7.0"
+                  }
+                },
+                {
+                  "key": "net.transport",
+                  "value": {
+                    "stringValue": "ip_tcp"
+                  }
+                },
+                {
+                  "key": "http.method",
+                  "value": {
+                    "stringValue": "GET"
+                  }
+                },
+                {
+                  "key": "net.host.port",
+                  "value": {
+                    "stringValue": "18888"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-6"
+                  }
+                },
+                {
+                  "key": "net.host.name",
+                  "value": {
+                    "stringValue": "localhost"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "http.target",
+                  "value": {
+                    "stringValue": "/owners/1"
+                  }
+                },
+                {
+                  "key": "http.flavor",
+                  "value": {
+                    "stringValue": "1.1"
+                  }
+                },
+                {
+                  "key": "http.scheme",
+                  "value": {
+                    "stringValue": "http"
+                  }
+                },
+                {
+                  "key": "http.user_agent",
+                  "value": {
+                    "stringValue": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "6b15ee9b1be25b20168ed65bdc3b154a",
+              "spanId": "3afb443d64ae9d4a",
+              "parentSpanId": "",
+              "name": "/**",
+              "kind": 2,
+              "startTimeUnixNano": "1671056569654000000",
+              "endTimeUnixNano": "1671056569668428000",
+              "attributes": [
+                {
+                  "key": "http.flavor",
+                  "value": {
+                    "stringValue": "1.1"
+                  }
+                },
+                {
+                  "key": "http.status_code",
+                  "value": {
+                    "stringValue": "200"
+                  }
+                },
+                {
+                  "key": "http.target",
+                  "value": {
+                    "stringValue": "/resources/css/petclinic.css"
+                  }
+                },
+                {
+                  "key": "net.host.name",
+                  "value": {
+                    "stringValue": "localhost"
+                  }
+                },
+                {
+                  "key": "net.sock.peer.port",
+                  "value": {
+                    "stringValue": "59052"
+                  }
+                },
+                {
+                  "key": "http.method",
+                  "value": {
+                    "stringValue": "GET"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "32"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-7"
+                  }
+                },
+                {
+                  "key": "http.response_content_length",
+                  "value": {
+                    "stringValue": "207858"
+                  }
+                },
+                {
+                  "key": "http.scheme",
+                  "value": {
+                    "stringValue": "http"
+                  }
+                },
+                {
+                  "key": "net.host.port",
+                  "value": {
+                    "stringValue": "18888"
+                  }
+                },
+                {
+                  "key": "net.transport",
+                  "value": {
+                    "stringValue": "ip_tcp"
+                  }
+                },
+                {
+                  "key": "net.sock.host.addr",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                },
+                {
+                  "key": "http.route",
+                  "value": {
+                    "stringValue": "/**"
+                  }
+                },
+                {
+                  "key": "http.user_agent",
+                  "value": {
+                    "stringValue": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+                  }
+                },
+                {
+                  "key": "net.sock.host.port",
+                  "value": {
+                    "stringValue": "8080"
+                  }
+                },
+                {
+                  "key": "net.sock.peer.addr",
+                  "value": {
+                    "stringValue": "172.20.0.1"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.tomcat-7.0"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "e3e857b9b50da57c69bff81dfeaf3e50",
+              "spanId": "d9e0edadc386d51e",
+              "parentSpanId": "",
+              "name": "/webjars/**",
+              "kind": 2,
+              "startTimeUnixNano": "1671056569689000000",
+              "endTimeUnixNano": "1671056569717823000",
+              "attributes": [
+                {
+                  "key": "http.method",
+                  "value": {
+                    "stringValue": "GET"
+                  }
+                },
+                {
+                  "key": "net.sock.host.addr",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                },
+                {
+                  "key": "otel.scope.version",
+                  "value": {
+                    "stringValue": "1.20.2-alpha"
+                  }
+                },
+                {
+                  "key": "http.target",
+                  "value": {
+                    "stringValue": "/webjars/bootstrap/5.1.3/dist/js/bootstrap.bundle.min.js.map"
+                  }
+                },
+                {
+                  "key": "thread.name",
+                  "value": {
+                    "stringValue": "http-nio-8080-exec-8"
+                  }
+                },
+                {
+                  "key": "http.scheme",
+                  "value": {
+                    "stringValue": "http"
+                  }
+                },
+                {
+                  "key": "net.host.port",
+                  "value": {
+                    "stringValue": "18888"
+                  }
+                },
+                {
+                  "key": "net.sock.host.port",
+                  "value": {
+                    "stringValue": "8080"
+                  }
+                },
+                {
+                  "key": "thread.id",
+                  "value": {
+                    "stringValue": "33"
+                  }
+                },
+                {
+                  "key": "http.flavor",
+                  "value": {
+                    "stringValue": "1.1"
+                  }
+                },
+                {
+                  "key": "net.sock.peer.port",
+                  "value": {
+                    "stringValue": "59052"
+                  }
+                },
+                {
+                  "key": "net.sock.peer.addr",
+                  "value": {
+                    "stringValue": "172.20.0.1"
+                  }
+                },
+                {
+                  "key": "http.response_content_length",
+                  "value": {
+                    "stringValue": "331017"
+                  }
+                },
+                {
+                  "key": "net.host.name",
+                  "value": {
+                    "stringValue": "localhost"
+                  }
+                },
+                {
+                  "key": "http.user_agent",
+                  "value": {
+                    "stringValue": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+                  }
+                },
+                {
+                  "key": "http.status_code",
+                  "value": {
+                    "stringValue": "200"
+                  }
+                },
+                {
+                  "key": "http.route",
+                  "value": {
+                    "stringValue": "/webjars/**"
+                  }
+                },
+                {
+                  "key": "net.transport",
+                  "value": {
+                    "stringValue": "ip_tcp"
+                  }
+                },
+                {
+                  "key": "otel.scope.name",
+                  "value": {
+                    "stringValue": "io.opentelemetry.tomcat-7.0"
+                  }
+                },
+                {
+                  "key": "net.host.ip",
+                  "value": {
+                    "stringValue": "172.20.0.5"
+                  }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
